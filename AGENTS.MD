@@ -54,6 +54,7 @@ python -m src.main
 
 ## AI-Assisted Development Process
 AI assistance was utilized for the following aspects of the project:
+* **Initial project structure:** Building a draft of the project to improve upon.
 * **Dual API Integration:** Implementing logic to chain requests between OpenStreetMap and the National Weather Service.
 * **Error Handling:** Developing robust `try/except` blocks to handle API 403/404 errors and connection timeouts.
 * **Interactive Interface:** Ensuring the application has interactive features and functions accordingly.
@@ -85,3 +86,23 @@ AI assistance was utilized for the following aspects of the project:
 * **PEP 8:** Code follows standard Python styling guidelines.
 * **Handle errors gracefully:** (e.g., API errors, invalid user input) using `try/except` and 
 * **API:** Mock all external API calls in tests.
+
+
+## Reflection
+
+### Successes
+
+- Gemini built great boilerplate code to build upon.
+- Debugging was simple using AI by building well-structured prompts.
+- Gemini was excellent at properly writing docstrings for functions.
+
+### Challenges
+
+- Gemini struggles to build markdown files, as it renders the markdown in its response.
+- Integrating two API's was difficult at first, but after many trials & errors it succeeded.
+
+### Learning Impact
+
+- Utilizin AI allowed me to go above and beyond my technical capabilities while also learning lots about API integration.
+- I made a focus of perfecting the user experience, python application structure, and logic behind functions.
+- I allowed Gemini to focus on generating a strong boilerplate and generating logic which I needed assistance with.
