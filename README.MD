@@ -55,7 +55,7 @@ Follow these steps to set up the project locally.
 
 3.  **Install required dependencies:**
     ```bash
-    pip install requests tabulate pytest pytest-mock
+    pip install -r requirements.txt
     ```
 
 ## Usage
@@ -67,7 +67,7 @@ This application is designed to be run from the project root.
 Ensure your virtual environment is active, then run:
 
 ```bash
-python main.py
+python -m src.main
 ```
 **Example Usage**
 
