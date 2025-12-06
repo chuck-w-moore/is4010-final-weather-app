@@ -99,8 +99,9 @@ AI assistance was utilized for the following aspects of the project:
 
 ### Challenges
 
-- Gemini struggles to build markdown files, as it renders the markdown in its response.
+- Gemini struggles to build markdown files, as it will often render the markdown in its response, rather than displaying the raw code.
 - Integrating two API's was difficult at first, but after many trials & errors and careful debugging I succeeded.
+- Building specific test functions took longer than expected; however, after properly explaining the errors I received I was able to fix these functions.
 
 ### Learning Impact
 
