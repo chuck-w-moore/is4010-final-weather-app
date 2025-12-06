@@ -1,38 +1,37 @@
+# Workflow to automatically run tests on push or pull request.
 name: Python CI
 
-# This triggers the test whenever you push to main 
-# or open a pull request against main
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
 
     steps:
-    # 1. Check out your code from GitHub
-    - uses: actions/checkout@v3
+    - name: Check out repository
+      uses: actions/checkout@v4
 
-    # 2. Set up Python environment
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
       with:
-        python-version: "3.10"
+        python-version: ${{ matrix.python-version }}
 
-    # 3. Install your specific libraries
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        # We explicitly install pytest-mock just in case it's missing from requirements
-        pip install pytest pytest-mock requests tabulate
+        # We explicitly add requests and tabulate here to be 100% safe
+        pip install requests tabulate pytest pytest-mock
 
-    # 4. Run the tests
-    - name: Test with pytest
+    - name: Run tests with pytest
+      # PYTHONPATH so pytest can "see" the src folder
       run: |
-        # This line ensures Python finds your 'src' folder
         export PYTHONPATH=$PYTHONPATH:$(pwd)
         pytest
