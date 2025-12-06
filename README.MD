@@ -69,7 +69,6 @@ Ensure your virtual environment is active, then run:
 ```bash
 python main.py
 ```
-
 **Example Usage**
 
 Enter a US City (e.g., 'Miami, FL'): Austin, TX
@@ -77,13 +76,11 @@ Searching for 'Austin, TX'...
 Found: Austin, Travis County, Texas, United States
 
 The forecast for Austin, Travis County, Texas, United States:
-|+----------------+--------+-----------+-----------------------------------+ |
+
 | Period         | Temp   | Wind      | Forecast                          |
-| +================+========+===========+===================================+ |
+| :------------- | :----- | :-------- | :-------------------------------- |
 | This Afternoon | 75 F   | 5 mph S   | Sunny                             |
-| +----------------+--------+-----------+-----------------------------------+ |
 | Tonight        | 55 F   | 10 mph SW | Mostly Clear                      |
-| +----------------+--------+-----------+-----------------------------------+ |
 
 ## License
 
