@@ -1,22 +1,38 @@
-name: Run Tests
+name: Python CI
 
-on: [push, pull_request]
+# This triggers the test whenever you push to main 
+# or open a pull request against main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-          
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          
-      - name: Run tests
-        run: |
-          pytest
+    # 1. Check out your code from GitHub
+    - uses: actions/checkout@v3
+
+    # 2. Set up Python environment
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    # 3. Install your specific libraries
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # We explicitly install pytest-mock just in case it's missing from requirements
+        pip install pytest pytest-mock requests tabulate
+
+    # 4. Run the tests
+    - name: Test with pytest
+      run: |
+        # This line ensures Python finds your 'src' folder
+        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        pytest
