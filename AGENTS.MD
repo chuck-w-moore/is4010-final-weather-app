@@ -99,10 +99,10 @@ AI assistance was utilized for the following aspects of the project:
 ### Challenges
 
 - Gemini struggles to build markdown files, as it renders the markdown in its response.
-- Integrating two API's was difficult at first, but after many trials & errors it succeeded.
+- Integrating two API's was difficult at first, but after many trials & errors and careful debugging it succeeded.
 
 ### Learning Impact
 
-- Utilizin AI allowed me to go above and beyond my technical capabilities while also learning lots about API integration.
+- Utilizing AI allowed me to go above and beyond my technical capabilities while also learning lots about API integration.
 - I made a focus of perfecting the user experience, python application structure, and logic behind functions.
 - I allowed Gemini to focus on generating a strong boilerplate and generating logic which I needed assistance with.
