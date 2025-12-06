@@ -1,5 +1,5 @@
 # US Weather App CLI
-[![Python CI](https://github.com/chuck-w-moore/treasury-cli-app/actions/workflows/tests.yml/badge.svg)](https://github.com/chuck-w-moore/is4010-final-weather-app/actions)
+[![Tests](https://github.com/chuck-w-moore/us-weather-cli/actions/workflows/python-app.yml/badge.svg)]
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
