@@ -5,7 +5,7 @@
 
 A Python command-line application using an interactive interface to fetch and display real-time weather forecasts for United States cities using a Dual-API architecture.
 
-## Overview
+## Project Overview
 
 This tool provides an interactive interface to query weather data without needing to know geographic coordinates. Users simply enter a city name (e.g., "Cincinnati, OH"), and the application automatically resolves the location and fetches the latest forecast from the National Weather Service.
 
