@@ -92,6 +92,7 @@ AI assistance was utilized for the following aspects of the project:
 
 ### Successes
 
+- By building strong prompts with the structure: Role, objective, context, and return, I was able to obtain results from Gemini which were accurate to what I asked in the prompt
 - Gemini built great boilerplate code to build upon.
 - Debugging was simple using AI by building well-structured prompts.
 - Gemini was excellent at properly writing docstrings for functions.
@@ -99,7 +100,7 @@ AI assistance was utilized for the following aspects of the project:
 ### Challenges
 
 - Gemini struggles to build markdown files, as it renders the markdown in its response.
-- Integrating two API's was difficult at first, but after many trials & errors and careful debugging it succeeded.
+- Integrating two API's was difficult at first, but after many trials & errors and careful debugging I succeeded.
 
 ### Learning Impact
 
